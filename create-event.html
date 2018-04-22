@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Match</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+            <link rel="stylesheet" href="themes/event-match.min.css" />
+    </head>
+    
+    <body>
+        <!-- Start of create event page -->
+        <div data-role="page" id="create">
+            
+            <div data-role="header">
+                <h1>Create Event</h1>
+            </div>
+
+            <div role="content" class="ui-content">
+
+
+             <!--Event Name Input--> 
+             
+             <div class="ui-field-contain">
+                 <label for="textinput-fc">Event Name</label>
+                 <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Enter event name" value="">
+             </div>
+
+             <!--Event Host Input--> 
+
+             <div class="ui-field-contain">
+                 <label for="textinput-fc">Host</label>
+                 <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Enter host name" value="">
+             </div>
+
+             <!--Add photo-->
+
+             <div class="ui-field-contain">
+                 <label for="file">Add photo</label>
+                 <input type="file" name="file" id="file" value=""> 
+             </div> 
+
+             <!--Event Description Input--> 
+
+             <div class="ui-field-contain">
+                 <label for="textarea">Description</label>
+                 <textarea cols="30" rows="15" name="textarea" id="textarea"></textarea>
+             </div>
+
+             <!--Start Time Input-->
+
+             <div class="ui-field-contain">
+             	<label for="time">Start Time</label>
+             	<input type="time" name="time" id="time" value="xx:xx am">
+             </div>
+
+             <!--End Time Input-->
+
+             <div class="ui-field-contain">
+             	<label for="time">End Time</label>
+             	<input type="time" name="time" id="time" value="xx:xx am">
+             </div>
+
+             <!--All Day Slider-->
+
+             <div class="ui-field-contain">
+                <label for="flip-3">All Day</label>
+                <select name="flip-3" id="flip-3" data-role="flipswitch" data-mini="true">
+                    <option value="off"></option>
+                    <option value="on"></option>
+                </select>
+            </div>
+
+             <!--Date Input--> 
+
+             <div class="ui-field-contain">
+                 <label for="date">Date</label>
+                 <input type="date" name="date" id="date" value="">
+             </div>
+
+             <!--Location Input-->
+
+             <div class="ui-field-contain">
+                 <label for="textinput-fc">Location</label>
+                 <input type="text" name="textinput-fc" id="textinput-fc" placeholder="Enter location" value="">
+             </div>
+
+             <!--Price Select Menu-->
+
+             <div class="ui-field-contain">   
+                <label for="select-price" class="select">Price</label>
+                <select name="select-price" id="select-price">
+                    <option value="free">Free</option>
+                    <option value="1-10">$1-$10</option>
+                    <option value="11-25">$11-$25</option>
+                    <option value="26-50">$26-$50</option>
+                    <option value="50+">$50+</option>
+                </select>
+             </div>
+
+             <!--Save Option Button-->
+
+             <a href="#popupsave" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Save</a>
+
+
+             <div data-role="popup" id="popupsave" class="ui-content">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <form>
+                    <p>You have successfully saved this event.</p>
+                    <p>Do not forget to come back and fill in the missing information to create the event.</p>
+                    <a href="#wevent" class="ui-btn ui-btn-inline">View saved event</a>
+                </form>
+             </div>
+
+
+             <!--Create Option Button-->
+
+             <a href="#popupsuccess" data-rel="popup" class="ui-btn ui-corner-all ui-shadow ui-btn-inline" data-transition="pop">Create</a>
+
+
+             <div data-role="popup" id="popupsuccess" class="ui-content">
+                <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                <form>
+                    <p>You have successfully created an event!</p>
+                    <p>A confirmation email has been sent to youremail@college.edu
+                    </p>
+                    <div class="ui-field-contain"> 
+                        <p>Share:</p>
+                        <button class="ui-btn ui-shadow ui-corner-all ui-btn-icon-right ui-icon-action ui-btn-icon-notext"></button>
+                    </div>
+                    <a href="#wevent" class="ui-btn ui-btn-inline">View event</a>
+                </form>
+             </div>
+         </div><!--content end-->
+
+
+         <!--Create Event Page Footer-->
+         <div data-role="footer" class="footer">
+
+            <div data-role="navbar">
+                <ul>
+                    <li> <a href="search-event.html" data-icon="search"></a>
+                	<li> <a href="your-matches.html" data-icon="user"></a>
+                	<li> <a href="#create" data-icon="plus"></a>
+            	</ul>
+            </div>
+         </div>
+
+     </div><!-- End of Create Event page -->
+
+
+        <!-- Start of Wellesley Event Example page -->
+        <div data-role="page" id="wevent">
+            
+            <div data-role="header" data-position="inline">
+                
+                <a href="create-event.html" data-icon="arrow-l">Back</a> 
+                <h1></h1>
+
+                <a href="#collap" data-icon="bars" data-iconpos="right">More</a>
+
+            </div><!--End of header -->
+
+            <p style="padding: 0px 20px 0px 20px;"><img src="images/spring.jpg" height="250" width="500" alt="Spring Festival Poster"></p>
+
+            <h3 style="padding: 5px 10px 0px 10px;">Slater Spring Festival<a href="#" data-rel="popup" data-transition="pop" class="my-tooltip-btn ui-btn ui-alt-icon ui-nodisc-icon ui-btn-inline ui-icon-star ui-btn-icon-notext" title="star icon" style="background-color: white; border-style: none"></a></h3>
+
+            
+            <div role="main" class="ui-content">
+                <p>Wellesley College</p>
+                <p>April 21, 2018</p>
+                <p>1:00-4:00pm EST</p>
+                <p>Chapel Lawn</p>
+                <p>Free</p>
+
+                <p></p>
+
+                <p>Come enjoy Slater and other Cultural Orgs for food, dance, music, performances and more! <br> Hope to see you there! <br><br>
+                Note: In case of rain, the alternative location is the HMC Multi Faith Room.</p>
+
+                <h2></h2>
+
+                <a href="#" class="ui-btn ui-corner-all">RSVP</a>
+                <a href="#" class="ui-btn ui-corner-all">Contact the Host</a>
+
+            </div><!-- /content -->
+            
+            <div data-role="footer" class="footer">
+                <div data-role="navbar">
+                    <ul>
+                        <li> <a href="search-event.html" data-icon="search"></a>
+                        <li> <a href="your-matches.html" data-icon="user"></a>
+                        <li> <a href="#create" data-icon="plus"></a>
+                    </ul>
+                </div>
+            </div><!-- /footer -->
+
+        </div><!-- End of Wellesley Example Event page -->
+        
+    </body>
+</html>
