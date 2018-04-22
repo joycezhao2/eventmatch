@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Matches</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+            <link rel="stylesheet" href="themes/event-match.min.css" />
+    </head>
+    
+    <body>
+        <div data-role="page" id="welcome"> 
+            <div data-role="header" data-position="inline">
+                <a href="#popupMenu" data-rel="popup" data-icon="gear" data-iconpos="notext" value="Icon only" data-iconpos="left"></a>
+                <a href="#welcome" data-role="button" data-icon="search" data-iconpos="notext" value="Icon only" data-iconpos="right"></a>
+                <div data-role="popup" id="popupMenu" data-theme="b">
+                    <a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+                    <ul data-role="listview" data-inset="true" style="min-width:210px;">
+                        <li data-role="list-divider">Options</li>
+                        <li><form>
+                            <label for="flip-checkbox-1">Location Services:</label>
+                            <input type="checkbox" data-role="flipswitch" name="flip-checkbox-1" id="flip-checkbox-1">
+                        </form></li>
+                        <li><a href="#" class="ui-btn ui-btn-inline">Logout</a></li>
+                        <li><a href="#" class="ui-btn ui-btn-inline" style="color:red;">Delete Account</a></li>
+                        </ul>
+                </div>
+                <h1>Your Matches!</h1>
+            </div>
+            <div class="content">
+                <div data-role="tabs" id="tabs">
+                    <div data-role="navbar">
+                        <ul>
+                          <li><a href="#star" data-ajax="false">Starred</a></li>
+                          <li><a href="#rsvp" data-ajax="false">Attending</a></li>
+                          <li><a href="#host" data-ajax="false">Hosting</a></li>
+                        </ul>
+                    </div>
+                    <div class="vertical-menu">
+                        <div id="star" class="ui-body-d ui-content">
+                            <ul data-role="listview" data-inset="true">
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="rsvp" class="ui-body-d ui-content">
+                            <ul data-role="listview" data-inset="true">
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="host" class="ui-body-d ui-content">
+                            <ul data-role="listview" data-inset="true">
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                                <li><a href="#">
+                                    <img src="img/logo.png">
+                                    <h2>Jazz Senior Concert</h2>
+                                    <p>Berklee College</p>
+                                    <p>May 5, 2018</p></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+
+            </div>
+
+            <div data-role="footer" class="footer" style="overflow:hidden;">
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="search-event.html" data-icon="search" data-iconpos="notext" value="Icon only"></a></li>
+                        <li><a href="#welcome" data-icon="user" data-iconpos="notext" value="Icon only"></a></li>
+                        <li><a href="create-event.html" data-icon="plus" data-iconpos="notext" value="Icon only"></a></li>
+                    </ul>
+                </div><!-- /navbar -->
+            </div><!-- /footer -->
+        </div><!-- /page -->
+    </body>
+</html>
