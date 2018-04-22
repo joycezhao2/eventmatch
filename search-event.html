@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Event Match</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+            <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+            <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+            <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+            <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+            <link rel="stylesheet" href="themes/event-match.min.css" />
+	</head>
+
+	<body>
+
+		<!-- Start of search event page -->
+		<div data-role="page" id="home">
+
+			<div data-role="header">
+				<h1>Browse Events</h1>
+			</div><!-- /header -->
+
+			<div data-role="content">
+
+				<!--Search Bar Input--> 
+
+				<form class="ui-filterable">
+					<input id="filterBasic-input" data-type="search">
+				</form>
+
+				<!--Advanced Search Button--> 
+		    	<a href = "#popupPadded" data-rel = "popup" class = "ui-btn ui-corner-all ui-shadow ui-btn-inline">Advanced Search</a>
+		    	<div data-role= "popup" id = "popupPadded" class = "ui-content">
+		    		<h3> Refine Search:</h3>
+		    		<input type="search" name="search-mini" id="search-mini" value="Search by Keyword:" data-mini="true">
+					<!--<div style= "padding:80px 80px;">-->
+				<form>
+		    		<fieldset data-role="controlgroup">
+		        		<legend>Categories:</legend>
+		        		<input type="checkbox" name="checkbox-v-2a" id="checkbox-v-2a">
+		        		<label for="checkbox-v-2a">Sports</label>
+		        		<input type="checkbox" name="checkbox-v-2b" id="checkbox-v-2b">
+		        		<label for="checkbox-v-2b">Arts</label>
+		        		<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+		        		<label for="checkbox-v-2c">Music</label>
+		        		        		<input type="checkbox" name="checkbox-v-2c" id="checkbox-v-2c">
+		        		<label for="checkbox-v-2c">Music</label>
+		    		</fieldset>
+
+		    		  <!-- Select time --> 
+					  <div class="ui-field-contain">
+					  <label for="select-native-1">Date:</label>
+					  <select name="select-native-1" id="select-native-1">
+					     <option value="1">Today </option>
+					     <option value="2">Tomorrow</option>
+					     <option value="3">This Weekend</option>
+					  </select>
+					</div>
+					
+		    		<label for="slider-1">Price($)</label>
+		    		<input type="range" name="slider-1" id="slider-1" min="0" max="100" value="0">
+		    		<label for="slider-1">Location(mile radius)</label>
+		    		<input type="range" name="slider-1" id="slider-1" min="0" max="30" value="0">
+				</form>
+
+				<input type="text" data-role="date">
+					<button type = "submit" class = "ui-btn ui-corner-all ui-shadow ui-btn-b ui-btn-icon-left"> Apply filters </button>
+				</div><!-- Popup!-->
+
+
+			<div id = "list">
+				<ul data-role="listview" data-inset="true">
+					<li data-role="list-divider">Events Listing:</li>
+					<li data-icon = "info"><a href="#event1">
+						<img src = "images/olin_tech.jpeg">
+						<h2>Olin Technology Fair</h2>
+						<p> Tuesday May 1st <br> Olin Hall </p>
+						<p class="ui-li-aside"><strong>2:00-5:00 </strong>PM</p>
+						</a></li>
+					<li data-icon = "info"><a href="#event2">
+						<img src = "images/mit_hockey.jpg">
+						<h2>MIT Hockey Game</h2>
+						<p> Monday May 7th <br> MIT Ice Rink</p>
+						<p class="ui-li-aside"><strong>5:00 </strong>PM</p>
+						</a></li>
+			    	<li data-icon = "info"><a href="#event3">
+						<img src = "images/orchestra.jpg">
+						<h2>Brandeis-Wellesley Orchestra</h2>
+						<p> Tuesday May 8th <br> Wellesley Houghton Chapel</p>
+						<p class="ui-li-aside"><strong>7:30 </strong>PM</p>
+						</a></li>
+			    	<li data-icon = "info"><a href="#event4">
+			    		<img src = "images/heathers.jpg">
+						<h2>Babson Players Presents: <br>Heathers The Musical</h2>
+						<p> Saturday May 19th <br> Babson Sorenson Theater</p>
+						<p class="ui-li-aside"><strong>7:00 </strong>PM</p>
+						</a></li>
+		    	</ul>
+		    	<h4></h4>
+			</div><!-- /list-->
+	    </div><!-- /content -->
+
+			<div data-role="footer" class="footer">
+				<div data-role="navbar">
+			   	<ul>
+			   		<li><a href="#search" data-icon="search" class = "ui-btn-active">Search</a></li>
+			        <li><a href="your-matches.html" data-icon="user">Matches</a></li>
+			        <li><a href="create-event.html" data-icon="plus">Create</a></li>
+			    </ul>
+			</div><!-- /footer at end of page -->
+		</div><!-- /END OF FIRST PAGE: SEARCH -->
+
+
+
+		<!-- START OF APPLIED FILTERS PAGE-->
+		<div data-role="page" id="gallery">
+			<div data-role="header">
+		  	<h1>Gallery</h1>
+			<a data-icon="back" data-rel="back" back-btn="true">Back</a>
+			<a href="#home" data-role="button" data-icon="home" data-iconpos="right">Home</a>
+			</div><!-- /header -->
+
+			<div data-role="content">
+				<ul data-role="listview">
+			    <li>
+			        <a href="#place1" class="ui-link-inherit">
+			    		<img src="images/swissalps.jpg">
+			        	<h3 class="ui-li-heading">Swiss Alps</h3>
+			        	<p class="ui-li-desc">It is on my bucket list to go to Switzerland and climb the Swiss Alps! - Angela</p>
+			        </a>
+			    </li>
+			     <li>
+			        <a href="#place2" class="ui-link-inherit">
+						<img src="images/chengdu.jpeg">
+			            <h3 class="ui-li-heading">Chengdu, China</h3>
+			        	<p class="ui-li-desc">One of my favorite places to visit is my mom's hometown in Chengdu, China! - Angela</p>
+			        </a>
+			    </li>
+			    <li>
+			         <a href="#place3" class="ui-link-inherit">
+			    		<img src="images/paris.jpg">
+			            <h3 class="ui-li-heading">Paris, France</h3>
+			           	<p class="ui-li-desc"> One of the places I'd love to visit is Paris France! - Maggie </p>
+			         </a>
+			    </li>
+				</ul>
+			</div><!-- /content -->
+
+			<div data-role="footer" class="footer">
+				<h4></h4>
+			</div><!-- /header -->
+		</div><!-- /END OF APPLIED FILTERS PAGE->
+
+
+		<!- START OF OLIN TECH FAIR EVENT PAGE-->
+		<div data-role="page" id="event1">
+
+			<div data-role="header">
+		  	<h1>eventMatch!</h1>
+				<a data-icon="back" data-rel="back" back-btn="true">Back</a>
+			</div><!-- /header -->
+
+
+			<div data-role="content">
+				<ul data-role="listview">
+				<img src = "images/olin_tech.jpeg">
+				<div id = "list">
+				<ul data-role="listview">
+					<li data-icon = "star"><a href="#event1">
+						<h2>Olin Technology Fair</h2>
+						<p> Tuesday May 1st <br> 
+						    Olin Hall <br>
+							Free admission! <br>
+						 	Don't forget to bring your resume and your best networking skills!</p>
+						<p class="ui-li-aside"><strong>2:00-5:00 </strong>PM</p>
+						</a></li>
+		    	</ul>
+		    	</div>
+
+
+			<div data-role="content">
+				<img src="images/olin_tech.jpeg" alt = "olin tech fair">
+				<div style = "float:left;">
+					<a href="index.html" data-role="button" data-icon="star" data-iconpos="notext" data-inline = "true" class = "ui-btn-right">Star </a>
+					<h2> Olin Technology Fair</h2>
+					<p> Tuesday, May 1st <br> 
+						 Olin Hall <br>
+						 2:00-5:00 PM<br>
+						 Free admission!<br><br>
+						 Don't forget to bring your resume and your best networking skills!
+					<p>
+				</div>
+			</div><!-- /content -->
+			
+			<div data-role="footer" class="footer">
+				<div data-role="navbar">
+			   <ul>
+			   		<li><a href="#search" data-icon="search" class = "ui-btn-active">Search</a></li>
+			        <li><a href="your-matches.html" data-icon="user">Matches</a></li>
+			        <li><a href="create-event.html" data-icon="plus">Create</a></li>
+			    </ul>
+			</div><!-- /navbar -->
+		</div><!-- /footer at end of page -->
+
+
+  </div><!-- /END OF OLIN TECH EVENT PAGE -->
+
+</body>
+</html>
